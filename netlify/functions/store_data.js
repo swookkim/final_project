@@ -14,7 +14,7 @@ exports.handler = async function(event) {
   // create a new post, wait for it to return
   await db.collection('items').add({
     userName: userName,
-    kimchiPremium: globalPrice,
+    globalPrice: globalPrice,
     created: firebase.firestore.FieldValue.serverTimestamp()
   })
 
