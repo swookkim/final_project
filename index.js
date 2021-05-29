@@ -71,12 +71,15 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // Fill the global element with the price
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-
+    
+    // build the save the data button
     document.querySelector(`.get-coin`).insertAdjacentHTML (`afterend`,
     `<button class="saveData border bg-purple-500 text-white rounded px-2 py-2">Save</button>`)
 
+    // get a reference to the sign out button
     let saveButton = document.querySelector(`.saveData`)
 
+    // store the data to the fire base
     saveButton.addEventListener(`click`, async function(event) {
   
         let url = `/.netlify/functions/store_data`
