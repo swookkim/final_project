@@ -89,7 +89,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
       let url = `/.netlify/functions/store_data?userName=${user.displayName}`
 
       let response = await fetch(url)
-    }
+      }
 
     // // Build the URL for our posts API
     // let url = `/.netlify/functions/posts`
