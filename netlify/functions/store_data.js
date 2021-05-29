@@ -13,7 +13,7 @@ exports.handler = async function(event) {
   let db = firebase.firestore()
 
   // create a new post, wait for it to return
-  let docRef = await db.collection('userData').add({
+  let docRef = await db.collection('items').add({
     userName: 'userName',
     kimchiPremium: 'kimchiPremium',
     created: firebase.firestore.FieldValue.serverTimestamp()
