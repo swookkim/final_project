@@ -86,7 +86,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     
       event.preventDefault()
 
-      let url = `/.netlify/functions/store_data?userName=${user.displayName}`
+      let url = `http://localhost:8888/.netlify/functions/store_data?userName=${user.displayName}`
 
       let response = await fetch(url)
       })
