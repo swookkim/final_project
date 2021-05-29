@@ -73,7 +73,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
 
     document.querySelector(`.get-coin`).insertAdjacentHTML (`beforeend`,
-    `<button class="saveData border bg-purple-500 text-white rounded px-4 py-2">Save</button>`)
+    `<button class="saveData border bg-purple-500 text-white rounded px-4 py-8">Save</button>`)
 
     })
       
