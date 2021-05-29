@@ -80,11 +80,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
     
-    exports.handler = async function(event) {
-
-      let db = firebase.firestore()
-
-    }
+    let url = `/.netlify/functions/store_data?userName=${user.displayName}&kimchiPremium${user.KoreaToGlobalYield}`
 
 
     // // Build the URL for our posts API
