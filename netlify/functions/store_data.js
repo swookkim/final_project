@@ -5,7 +5,7 @@ let firebase = require(`./firebase`)
 // /.netlify/functions/create_comment?postId=xxxxxxxxx&userName=Brian&body=Tacos!
 exports.handler = async function(event) {
 
-  let userName = event.queryStringParameters.userName
+  let userName = event.queryStringParameters.displayName
   let kimchiPremium = event.queryStringParameters.KoreaToGlobalYield
 
 
