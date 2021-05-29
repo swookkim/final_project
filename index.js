@@ -79,12 +79,10 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // Fill the global element with the price
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-    
-    let url = `http://localhost:8888/.netlify/functions/store_data?userName=${user.displayName}&kimchiPremium${user.KoreaToGlobalYield}`
+  
+    let url = `http://localhost:8888/.netlify/functions/store_data?userName=${user.displayName}&kimchiPremium=${user.KoreaToGlobalYield}`
 
     let response = await fetch(url)
-
-
 
     // // Build the URL for our posts API
     // let url = `/.netlify/functions/posts`
