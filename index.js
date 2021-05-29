@@ -80,7 +80,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
   
-    let url = `http://localhost:8888/.netlify/functions/store_data`
+    let url = `/.netlify/functions/store_data`
 
     let response = await fetch(url)
 
