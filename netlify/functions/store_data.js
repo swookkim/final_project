@@ -8,7 +8,6 @@ exports.handler = async function(event) {
   let userName = event.queryStringParameters.displayName
   let kimchiPremium = event.queryStringParameters.KoreaToGlobalYield
 
-
   // establish a connection to firebase in memory
   let db = firebase.firestore()
 
