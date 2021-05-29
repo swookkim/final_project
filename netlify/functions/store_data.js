@@ -6,14 +6,15 @@ let firebase = require(`./firebase`)
 exports.handler = async function(event) {
 
   let userName = event.queryStringParameters.userName
+  let globalPrice = event.queryStringParameters.globalPrice
 
   // establish a connection to firebase in memory
   let db = firebase.firestore()
 
   // create a new post, wait for it to return
   await db.collection('items').add({
-    userName: 'userName',
-    kimchiPremium: 'kimchiPremium',
+    userName: userName,
+    kimchiPremium: globalPrice,
     created: firebase.firestore.FieldValue.serverTimestamp()
   })
 
