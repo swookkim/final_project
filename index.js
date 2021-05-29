@@ -72,14 +72,6 @@ firebase.auth().onAuthStateChanged(async function(user) {
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
     
-
-    // Store a reference to the "global-price element"
-    let globalElement = document.querySelector(`.global-price`)
-
-    // Fill the global element with the price
-    globalElement.insertAdjacentHTML(`beforeend`,`
-    <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-    
     })
 
     let saveButton = document.querySelector(`#saveData`)
