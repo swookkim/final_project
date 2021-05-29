@@ -71,17 +71,17 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // Fill the global element with the price
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-    
+
+    })
+
     let saveButton = document.querySelector(`#saveData`)
     
     saveButton.addEventListener(`click`, async function(event){
       
-      let url = `/.netlify/functions/store_data?userName=${displayName}`
+      let url = `/.netlify/functions/store_data?`
 
       let response = await fetch(url)
       })
-
-    })
 
     // // Build the URL for our posts API
     // let url = `/.netlify/functions/posts`
