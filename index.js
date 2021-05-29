@@ -73,12 +73,6 @@ firebase.auth().onAuthStateChanged(async function(user) {
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
     })
 
-    getCoinButton.addEventListener(`click`, async function(event) {
-    
-      let url = `/.netlify/functions/store_data`
-
-      let response = await fetch(url)})
-
     // Store a reference to the "global-price element"
     let globalElement = document.querySelector(`.global-price`)
 
@@ -86,6 +80,17 @@ firebase.auth().onAuthStateChanged(async function(user) {
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
     
+    let saveButton
+    
+    saveButton.addEventListener(`click`, async function(event) {
+    
+      event.preventDefault()
+
+      let url = `/.netlify/functions/store_data?userName=${user.displayName}`
+
+      let response = await fetch(url)
+    }
+
     // // Build the URL for our posts API
     // let url = `/.netlify/functions/posts`
 
