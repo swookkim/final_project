@@ -84,6 +84,8 @@ firebase.auth().onAuthStateChanged(async function(user) {
 
     let response = await fetch(url)
 
+    
+
     // // Build the URL for our posts API
     // let url = `/.netlify/functions/posts`
 
