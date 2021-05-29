@@ -80,9 +80,9 @@ firebase.auth().onAuthStateChanged(async function(user) {
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
     
-    let saveButton = document.querySelector(`.save`)
+    let saveButton = document.querySelector(`#save`)
     
-    saveButton.addEventListener(`click`, async function(event) {
+    saveButton.addEventListener(`click`, async function(event){
     
       event.preventDefault()
 
@@ -102,9 +102,10 @@ firebase.auth().onAuthStateChanged(async function(user) {
 
     // // Write the json-formatted data to the console in Chrome
     // console.log(json) 
-  }
+    }
 
-    else {
+
+  else {
     // Signed out
     console.log('signed out')
 
