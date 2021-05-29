@@ -75,18 +75,16 @@ firebase.auth().onAuthStateChanged(async function(user) {
     document.querySelector(`.button`).innerHTML = `
     <button class="saveData border bg-purple-500 text-white rounded px-4 py-2">Save</button>`
 
+    let saveButton = document.querySelector(`.saveData`)
 
+    signOutButton.addEventListener(`click`, function(event) {
 
-    })
-
-    let saveButton = document.querySelector(`#saveData`)
-    
-    saveButton.addEventListener(`click`, async function(event){
-      
       let url = `/.netlify/functions/store_data`
 
       let response = await fetch(url)
       })
+
+    })
 
     // // Build the URL for our posts API
     // let url = `/.netlify/functions/posts`
