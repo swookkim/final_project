@@ -102,7 +102,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
 
     // // Write the json-formatted data to the console in Chrome
     // console.log(json) 
-    }
+  }  
 
 
   else {
