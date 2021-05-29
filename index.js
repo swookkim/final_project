@@ -75,7 +75,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     document.querySelector(`.get-coin`).insertAdjacentHTML (`beforeend`,
     `<button class="saveData border bg-purple-500 text-white rounded px-4 py-2">Save</button>`)
 
-    let saveButton = document.querySelector(`.#saveData`)
+    let saveButton = document.querySelector(`#saveData`)
 
     saveButton.addEventListener(`click`, async function(event) {
 
