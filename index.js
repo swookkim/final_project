@@ -81,12 +81,8 @@ firebase.auth().onAuthStateChanged(async function(user) {
 
     // store the data to the fire base
     saveButton.addEventListener(`click`, async function(event) {
-
-        let name = user.displayName
-
-        let price = jsonGlobal.tick.close
   
-        let url = `/.netlify/functions/store_data?userName=${name}&globalPrice =${price}`
+        let url = `/.netlify/functions/store_data?userName=${user.displayName}`
   
         let response = await fetch(url)
         })
