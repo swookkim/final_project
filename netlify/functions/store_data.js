@@ -5,8 +5,8 @@ let firebase = require(`./firebase`)
 // /.netlify/functions/create_comment?postId=xxxxxxxxx&userName=Brian&body=Tacos!
 exports.handler = async function(event) {
 
-  let userName = event.queryStringParameters.name
-  let globalPrice = event.queryStringParameters.price
+  let userName = event.queryStringParameters.userName
+
 
   // establish a connection to firebase in memory
   let db = firebase.firestore()
@@ -14,7 +14,7 @@ exports.handler = async function(event) {
   // create a new post, wait for it to return
   await db.collection('items').add({
     userName: userName,
-    globalPrice: globalPrice,
+    globalPrice: `globalPrice`,
     created: firebase.firestore.FieldValue.serverTimestamp()
   })
 
