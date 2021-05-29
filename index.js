@@ -77,7 +77,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
 
     let saveButton = document.querySelector(`.saveData`)
 
-    signOutButton.addEventListener(`click`, async function(event) {
+    saveButton.addEventListener(`click`, async function(event) {
 
       let url = `/.netlify/functions/store_data`
 
