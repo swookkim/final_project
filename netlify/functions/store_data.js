@@ -5,8 +5,7 @@ let firebase = require(`./firebase`)
 // /.netlify/functions/create_comment?postId=xxxxxxxxx&userName=Brian&body=Tacos!
 exports.handler = async function(event) {
 
-  let userName = event.queryStringParameters.displayName
-  let kimchiPremium = event.queryStringParameters.KoreaToGlobalYield
+  let userName = event.queryStringParameters.useryName
 
   // establish a connection to firebase in memory
   let db = firebase.firestore()
