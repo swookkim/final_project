@@ -79,8 +79,12 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // Fill the global element with the price
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
+    
+    exports.handler = async function(event) {
 
+      let db = firebase.firestore()
 
+    }
 
 
     // // Build the URL for our posts API
