@@ -71,7 +71,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // Fill the global element with the price
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-  })
+    })
 
     // Store a reference to the "global-price element"
     let globalElement = document.querySelector(`.global-price`)
@@ -79,7 +79,6 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // Fill the global element with the price
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-  })
 
 
 
@@ -94,9 +93,10 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // let json = await response.json()
 
     // // Write the json-formatted data to the console in Chrome
-    // console.log(json)
+    // console.log(json) 
+  }
 
-  } else {
+    else {
     // Signed out
     console.log('signed out')
 
