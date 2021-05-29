@@ -80,7 +80,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
     
-    let saveButton
+    let saveButton = document.querySelector(`.save`)
     
     saveButton.addEventListener(`click`, async function(event) {
     
